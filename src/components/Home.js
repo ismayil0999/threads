@@ -1,46 +1,92 @@
-function Home(){
-    return(
+import { useState, useEffect, useRef } from "react";
+import FacebookIcon from '@mui/icons-material/Facebook';
+function Home() {
+    const [inputValue, setInputValue] = useState(""); 
+    const [input1Value, setInput1Value] = useState(""); 
+    const [isButtonRed, setIsButtonRed] = useState(false); 
+
+    const input = useRef();
+    const input1 = useRef();
+
+   
+    useEffect(() => {
+       
+        if (inputValue || input1Value) {
+            setIsButtonRed(true); 
+        } else {
+            setIsButtonRed(false); 
+        }
+    }, [inputValue, input1Value]);
+
+    return (
         <div className="home">
-<div className="home-container">
-<div className="top-item">
-    <select>
-        <option>English</option>
-    </select>
-    <div>
-    <img src="./logo.png"></img>
-</div>
-</div>
+            <div className="home-container">
+                <div className="top-item">
+                    <select>
+                        <option>English</option>
+                        <option>Afrikaans</option>
+                        <option>Arabic</option>
+                        <option>Türkçe</option>
+                        <option>Pусский</option>
+                        <option>Deutsch</option>
+                        <option>中文 (Zhōngwén)</option>
+                        <option>हिन्दी (Hindī)</option>
+                    </select>
+                    <div>
+                        <img src="./logo.png" alt="logo" />
+                    </div>
+                </div>
 
-<div className="center-box">
-<div className="button-box">
-  <button>
- <h4>Continue with Facebook</h4>
-  </button>
-</div>
-<div className="or-box">
-    <h4 className="or">OR</h4>
-</div>
+                <div className="center-box">
+                    <div className="button-box">
+                        <button>
+                            <FacebookIcon/>
+                            <a href="https://www.facebook.com/dialog/oauth?client_id=124024574287414&locale=tr_TR&redirect_uri=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F&response_type=code%2Cgranted_scopes&scope=email&state=%7B%22fbLoginKey%22%3A%221n3ztj31v1goq41r37akj16tkyrh1yqifoievonikmhiurs1wtfqp9%22%2C%22fbLoginReturnURL%22%3A%22%2Ffxcal%2Fdisclosure%2F%3Fnext%3D%252Faccounts%252Fsignup%252F%22%7D">
+                                Continue with Facebook
+                            </a>
+                        </button>
+                    </div>
+                    <div className="or-box">
+                        <h4 className="or">OR</h4>
+                    </div>
 
-<div className="input-box">
-    <input type="text" placeholder="Phone number, username, or email"></input>
-    <input type="password" placeholder="Password"></input>
+                    <div className="input-box">
+                        <input
+                            ref={input}
+                            type="text"
+                            placeholder="Phone number, username, or email"
+                            onChange={(e) => setInputValue(e.target.value)} 
+                        />
+                        <input
+                            ref={input1}
+                            type="password"
+                            placeholder="Password"
+                            onChange={(e) => setInput1Value(e.target.value)} 
+                        />
 
-    <h5>Forgot password?</h5>
-    <button>Log in</button>
-</div>
-<div className="bottom-box">
-    <h5>Don't have an account?</h5>
-    <a>Sign Up</a>
-</div>
-<div className="term">
-    <img src="./term.jpeg"></img>
-</div>
-</div>
-</div>
-<div className="bottom">
-    <img src="./bottom.jpeg"></img>
-</div>
+                        <a href="https://www.instagram.com/accounts/password/reset/">Forgot password?</a>
+                        <button
+                            style={{
+                                backgroundColor: isButtonRed ? "#0195F7" : "#4db6fa", 
+                            }}
+                        >
+                            Log in
+                        </button>
+                    </div>
+                    <div className="bottom-box">
+                        <h5>Don't have an account?</h5>
+                        <a href="https://www.instagram.com/accounts/emailsignup/">Sign Up</a>
+                    </div>
+                    <div className="term">
+                        <img src="./term.jpeg" alt="terms" />
+                    </div>
+                </div>
+            </div>
+            <div className="bottom">
+                <img src="./bottom.jpeg" alt="bottom" />
+            </div>
         </div>
-    )
+    );
 }
-export default Home
+
+export default Home;
