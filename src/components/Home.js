@@ -28,7 +28,17 @@ function Home(){
     <h5>Forgot password?</h5>
     <button>Log in</button>
 </div>
+<div className="bottom-box">
+    <h5>Don't have an account?</h5>
+    <a>Sign Up</a>
 </div>
+<div className="term">
+    <img src="./term.jpeg"></img>
+</div>
+</div>
+</div>
+<div className="bottom">
+    <img src="./bottom.jpeg"></img>
 </div>
         </div>
     )
