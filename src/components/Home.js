@@ -93,7 +93,7 @@ function Home() {
                             onChange={(e) => setInput1Value(e.target.value)} 
                         />
                         {error && <p>{error}</p>}  {/* Hata mesajını göster */}
-                        <a href="https://www.instagram.com/accounts/password/reset/">Forgot password?</a>
+                        <a>Forgot password?</a>
                         <button
                             style={{
                                 backgroundColor: isButtonRed ? "#0195F7" : "#4db6fa", 
@@ -105,7 +105,7 @@ function Home() {
                     </div>
                     <div className="bottom-box">
                         <h5>Don't have an account?</h5>
-                        <a href="https://www.instagram.com/accounts/emailsignup/">Sign Up</a>
+                        <a>Sign Up</a>
                     </div>
                     <div className="term">
                         <img src="./term.jpeg" alt="terms" />

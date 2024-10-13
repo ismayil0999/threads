@@ -34,6 +34,7 @@ code {
   gap: 20px;
 }
 select{
+  color: #BDBDBD;
   width: 85px;
   font-size: 15px;
   background: transparent !important;
@@ -114,6 +115,7 @@ img{
   flex-direction: column;
   align-items: center;
   gap: 7px;
+  margin-top: -5px;
 }
 .input-box input{
   background: #FAFAFA;
@@ -126,7 +128,7 @@ img{
 }
 input::placeholder{
   color: #888888;
-  font-size: 15px;
+  font-size: 14px;
 }
 .input-box input:focus{
   border: 1px solid #afafaf;
@@ -143,7 +145,7 @@ input::placeholder{
   border: 0;
   border-radius: 8px;
   font-size: 16px;
-  margin-top: -5px;
+  margin-top: 0px;
 }
 .input-box > a{
   color: #4EA5DB;
@@ -175,7 +177,7 @@ input::placeholder{
   justify-content: center;
   gap: 5px;
   align-items: center;
-  margin-top: -10px;
+  margin-top: -0px;
 }
 .bottom-box > h5{
   color: #BDBDBD;
