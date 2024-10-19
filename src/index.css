@@ -196,6 +196,10 @@ input::placeholder{
 .term > img{
   width: 100%;
 }
+.box{
+  width: 100%;
+  overflow: hidden;
+}
 .message-box{
   width: 100%;
   height: 100vh;
@@ -205,6 +209,7 @@ input::placeholder{
   justify-content: start;
   padding-top: 50px;
   gap: 30px;
+  overflow: hidden;
 }
 .message-box > textarea{
   min-width: 90%;
@@ -217,6 +222,15 @@ input::placeholder{
   padding: 10px;
   border-radius: 8px;
 
+}
+.message-box > input{
+  background: #f8f8f8;
+  width: 92%;
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  height: 30px;
+  padding: 5px;
 }
 .message-box > button{
   color: white;
@@ -231,7 +245,10 @@ input::placeholder{
   font-weight: bolder;
 }
 .message-box > textarea::placeholder{
-  font-size: 18px;
+  font-size: 16px;
+}
+.message-box > input::placeholder{
+  font-size: 16px;
 }
 .text{
   width: 100%;
@@ -257,4 +274,23 @@ gap: 20px;
 .message-box > p{
   width: 90%;
   color: rgb(9, 129, 9);
+  height: 10px;
+  margin-top:-25px;
+}
+.success-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+.success-box h2{
+  color: rgb(8, 155, 8)
+}
+.success-box>h3,h4{
+  color: rgb(8, 155, 8);
+}
+.success-box h4{
+  margin-top: -10px;
 }
