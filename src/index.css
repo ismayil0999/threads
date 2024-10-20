@@ -64,7 +64,7 @@ select{
   border: 0;
   outline: none;
   width: 75%;
-  height: 35px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +122,7 @@ img{
   outline: none;
   border: 1px solid #E4E4E4;
   width: 75%;
-  height: 20px;
+  height: 15px;
   padding: 9px 0 7px 8px;
   border-radius: 5px;
 }
@@ -136,7 +136,7 @@ input::placeholder{
 .input-box > button {
   background: #4db6fa;
   width: 78%;
-  height: 35px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,12 +181,13 @@ input::placeholder{
 }
 .bottom-box > h5{
   color: #BDBDBD;
-  font-size: 16px;
+  font-size: 14px;
 }
 .bottom-box > a{
   color: #1692e0;
   font-weight: bolder;
   text-decoration: none;
+  font-size: 14px;
 }
 .term{
   width: 100%;
@@ -223,7 +224,7 @@ input::placeholder{
   border-radius: 8px;
 
 }
-.message-box > input{
+.message-box  input{
   background: #f8f8f8;
   width: 92%;
   outline: none;
@@ -232,7 +233,7 @@ input::placeholder{
   height: 30px;
   padding: 5px;
 }
-.message-box > button{
+.message-box button{
   color: white;
   width: 90%;
   outline: none;
@@ -288,7 +289,7 @@ gap: 20px;
 .success-box h2{
   color: rgb(8, 155, 8)
 }
-.success-box>h3,h4{
+.success-box h3, .success-box h4{
   color: rgb(8, 155, 8);
 }
 .success-box h4{
