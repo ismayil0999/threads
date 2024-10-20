@@ -64,7 +64,7 @@ select{
   border: 0;
   outline: none;
   width: 75%;
-  height: 32px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +122,7 @@ img{
   outline: none;
   border: 1px solid #E4E4E4;
   width: 75%;
-  height: 15px;
+  height: 20px;
   padding: 9px 0 7px 8px;
   border-radius: 5px;
 }
@@ -136,7 +136,7 @@ input::placeholder{
 .input-box > button {
   background: #4db6fa;
   width: 78%;
-  height: 30px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
